@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.env
+artifacts/
+.DS_Store
+
+# Manuscripts (generated locally; not part of the implementation)
+PAPER.md
+PAPER.docx
