@@ -155,24 +155,32 @@ def make_figures(summary: dict, figdir: Path) -> list[Path]:
     items = summary["_per_item"]
     paths = []
 
-    fig, ax = plt.subplots(figsize=(5.5, 5))
-    for outcome, marker in (("income", "o"), ("wages", "s"), ("commute", "^")):
-        xs = [summary["_gold"][i["cell"]]["gold"]["q50"] for i in items
-              if i["arm"] == "quantiles" and i["outcome"] == outcome]
-        ys = [i["p50"] for i in items
-              if i["arm"] == "quantiles" and i["outcome"] == outcome]
-        ax.scatter(xs, ys, s=18, alpha=0.75, label=OUTCOME_LABEL[outcome], marker=marker)
-    lims = [1e2, 1e6]
-    ax.plot(lims, lims, "k--", lw=0.8)
-    ax.set_xscale("log"); ax.set_yscale("log")
-    ax.set_xlabel("Gold median (ACS PUMS)")
-    ax.set_ylabel("Model median")
-    ax.set_title("Predicted vs true medians")
-    ax.legend(fontsize=8)
-    p = figdir / "01_scatter"
-    fig.savefig(p.with_suffix(".svg"), bbox_inches="tight")
-    fig.savefig(p.with_suffix(".png"), dpi=150, bbox_inches="tight")
-    plt.close(fig); paths.append(p)
+    qitems_by_outcome = {
+        oc: [i for i in items if i["arm"] == "quantiles" and i["outcome"] == oc]
+        for oc in ("income", "wages", "commute")
+    }
+    for oc, sel in qitems_by_outcome.items():
+        fig, ax = plt.subplots(figsize=(5.2, 5))
+        xs = [summary["_gold"][i["cell"]]["gold"]["q50"] for i in sel]
+        ys = [i["p50"] for i in sel]
+        ax.scatter(xs, ys, s=42, alpha=0.8, color="#1f77b4")
+        lo = min(min(xs), min(ys))
+        hi = max(max(xs), max(ys))
+        pad = (hi - lo) * 0.08
+        lims = [max(0, lo - pad), hi + pad]
+        ax.plot(lims, lims, "k--", lw=0.9)
+        ax.set_xlim(lims); ax.set_ylim(lims)
+        if oc in ("income", "wages"):
+            ax.set_xscale("log"); ax.set_yscale("log")
+        ax.set_xlabel("Gold median (ACS PUMS)")
+        ax.set_ylabel("Model median")
+        ax.set_title(f"{OUTCOME_LABEL[oc]} — predicted vs true medians "
+                     f"(n={len(sel)})")
+        p = figdir / f"01_scatter_{oc}"
+        fig.savefig(p.with_suffix(".svg"), bbox_inches="tight")
+        fig.savefig(p.with_suffix(".png"), dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        paths.append(p)
 
     fig, ax = plt.subplots(figsize=(6.5, 4))
     bd = summary["quantile_arm"]["by_depth"]
@@ -299,7 +307,9 @@ def write_paper(root: Path, config_note: str) -> Path:
                      f"intervals below 70% coverage: {pct(ia['coverage_below_070_rate'])}; "
                      f"stated-width ratio to gold IQR: {ia['mean_width_ratio']:.2f}.")
     lines.append("")
-    lines.append("![Predicted vs true medians](artifacts/figures/01_scatter.svg)\n")
+    lines.append("![Household income: predicted vs true medians](artifacts/figures/01_scatter_income.svg)\n")
+    lines.append("![Wage earnings: predicted vs true medians](artifacts/figures/01_scatter_wages.svg)\n")
+    lines.append("![Commute time: predicted vs true medians](artifacts/figures/01_scatter_commute.svg)\n")
     lines.append("![Error by conditioning depth](artifacts/figures/02_depth.svg)\n")
     if any((figdir / "03_coverage.png").exists() for _ in [0]):
         lines.append("![Interval coverage](artifacts/figures/03_coverage.svg)\n")
