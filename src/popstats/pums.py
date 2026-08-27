@@ -16,13 +16,43 @@ FILE_KINDS = ("h", "p")  # housing, person
 
 MAX_ZIP_BYTES = 500 * 1024 * 1024
 
+# ACS supplies 80 successive-difference replicate weights for variance
+# estimation. Preserve them in the reduced Parquet extracts so gold
+# uncertainty can use the official survey design rather than an ad-hoc
+# row bootstrap.
+PERSON_REPLICATE_WEIGHTS = [f"PWGTP{i}" for i in range(1, 81)]
+HOUSING_REPLICATE_WEIGHTS = [f"WGTP{i}" for i in range(1, 81)]
+
 PERSON_COLUMNS = [
-    "PWGTP", "AGEP", "SEX", "SCHL", "ESR", "COW", "JWMNP", "WAGP",
-    "PERNP", "PINCP", "RAC1P", "HISP", "CIT", "PUMA",
+    "PWGTP",
+    *PERSON_REPLICATE_WEIGHTS,
+    "AGEP",
+    "SEX",
+    "SCHL",
+    "ESR",
+    "COW",
+    "JWMNP",
+    "WAGP",
+    "PERNP",
+    "PINCP",
+    "RAC1P",
+    "HISP",
+    "CIT",
+    "PUMA",
 ]
+
 HOUSING_COLUMNS = [
-    "WGTP", "HINCP", "TEN", "GRPIP", "VALP", "NP", "BDSP", "RMSP",
-    "VEHCP", "PUMA",
+    "WGTP",
+    *HOUSING_REPLICATE_WEIGHTS,
+    "HINCP",
+    "TEN",
+    "GRPIP",
+    "VALP",
+    "NP",
+    "BDSP",
+    "RMSP",
+    "VEHCP",
+    "PUMA",
 ]
 
 
@@ -55,59 +85,130 @@ def inner_csv_name(state: str, kind: str) -> str:
     return f"psam_{kind}{FIPS[state]}.csv"
 
 
-def download(root: Path, state: str, year: int, kind: str, chunk: int = 1 << 20) -> Path:
+def download(
+    root: Path,
+    state: str,
+    year: int,
+    kind: str,
+    chunk: int = 1 << 20,
+) -> Path:
     paths = make_paths(root, state, year, kind)
     paths.zip_path.parent.mkdir(parents=True, exist_ok=True)
+
     if paths.zip_path.exists():
         return paths.zip_path
+
     part = paths.zip_path.with_suffix(".zip.part")
+
     with requests.get(zip_url(state, year, kind), stream=True, timeout=180) as r:
         r.raise_for_status()
+
         total = int(r.headers.get("content-length", 0))
         if total and total > MAX_ZIP_BYTES:
             raise RuntimeError(f"{state}/{kind}: {total}B exceeds guard")
+
         written = 0
         with open(part, "wb") as fh:
             for chunk_bytes in r.iter_content(chunk):
                 written += len(chunk_bytes)
+
                 if written > MAX_ZIP_BYTES:
-                    raise RuntimeError(f"{state}/{kind}: exceeded size guard")
+                    raise RuntimeError(
+                        f"{state}/{kind}: exceeded size guard"
+                    )
+
                 fh.write(chunk_bytes)
+
     part.replace(paths.zip_path)
     return paths.zip_path
 
 
-def extract_to_parquet(root: Path, state: str, year: int, kind: str,
-                       columns: list[str] | None = None) -> Path:
+def extract_to_parquet(
+    root: Path,
+    state: str,
+    year: int,
+    kind: str,
+    columns: list[str] | None = None,
+) -> Path:
     import duckdb
 
     paths = make_paths(root, state, year, kind)
-    want = set(columns or (PERSON_COLUMNS if kind == "p" else HOUSING_COLUMNS))
+
+    want = set(
+        columns
+        or (
+            PERSON_COLUMNS
+            if kind == "p"
+            else HOUSING_COLUMNS
+        )
+    )
+
     work = paths.root / "work" / state
     work.mkdir(parents=True, exist_ok=True)
 
     with zipfile.ZipFile(paths.zip_path) as zf:
-        name = next(n for n in zf.namelist()
-                    if n.split("/")[-1].lower() == inner_csv_name(state, kind))
+        name = next(
+            n
+            for n in zf.namelist()
+            if n.split("/")[-1].lower()
+            == inner_csv_name(state, kind)
+        )
         zf.extract(name, work)
+
     csv_path = work / inner_csv_name(state, kind)
 
     with csv_path.open() as fh:
         header = fh.readline().strip().split(",")
+
     keep = [c for c in header if c in want]
+
+    # Fail loudly if the official ACS replicate weights are unexpectedly absent.
+    expected_replicates = (
+        PERSON_REPLICATE_WEIGHTS
+        if kind == "p"
+        else HOUSING_REPLICATE_WEIGHTS
+    )
+    missing_replicates = [
+        column
+        for column in expected_replicates
+        if column not in keep
+    ]
+
+    if missing_replicates:
+        raise RuntimeError(
+            f"{state}/{kind}: ACS replicate weights missing from source: "
+            f"{missing_replicates[:5]}"
+            + (
+                f" ... ({len(missing_replicates)} total)"
+                if len(missing_replicates) > 5
+                else ""
+            )
+        )
+
     pq = paths.parquet_path
     pq.parent.mkdir(parents=True, exist_ok=True)
+
     con = duckdb.connect()
     try:
         collist = ", ".join(f'"{c}"' for c in keep)
+
         con.execute(
-            f"""COPY (SELECT {collist} FROM read_csv_auto(
-                '{csv_path.as_posix()}', header=true, sample_size=-1))
-            TO '{pq.as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)"""
+            f"""COPY (
+                SELECT {collist}
+                FROM read_csv_auto(
+                    '{csv_path.as_posix()}',
+                    header=true,
+                    sample_size=-1
+                )
+            )
+            TO '{pq.as_posix()}'
+            (FORMAT PARQUET, COMPRESSION ZSTD)"""
         )
     finally:
         con.close()
+
     csv_path.unlink()
     paths.zip_path.unlink(missing_ok=True)
     shutil.rmtree(work, ignore_errors=True)
+
     return pq

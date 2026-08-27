@@ -9,6 +9,7 @@ description = "LLM elicitation of population distributions vs ACS PUMS gold"
 requires-python = ">=3.12"
 dependencies = [
     "duckdb>=1.0",
+    "numpy>=1.26",
     "requests>=2.31",
 ]
 
