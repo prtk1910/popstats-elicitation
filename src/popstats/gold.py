@@ -15,8 +15,25 @@ Z_95 = 1.959963984540054
 Z_90 = 1.6448536269514722
 
 
-def weighted_quantile(values, weights, q: float) -> float:
-    """Inverted-CDF weighted quantile."""
+def weighted_quantile(
+    values,
+    weights,
+    q: float,
+    *,
+    allow_negative: bool = False,
+) -> float:
+    """Inverted-CDF weighted quantile.
+
+    Full ACS PUMS weights are non-negative.
+
+    ACS replicate weights, however, may be positive, zero, or negative.
+    For replicate estimates we preserve the benchmark's inverted-CDF
+    definition and select the first sorted value whose signed cumulative
+    weight reaches the requested fraction of total replicate weight.
+
+    Because signed cumulative weights need not be monotone, np.searchsorted
+    must not be used for replicate-weight quantiles.
+    """
     if not 0.0 <= q <= 1.0:
         raise ValueError("q must be between 0 and 1")
 
@@ -25,9 +42,17 @@ def weighted_quantile(values, weights, q: float) -> float:
 
     if v.size == 0:
         raise ValueError("empty values")
+
     if v.size != w.size:
         raise ValueError("length mismatch")
-    if np.any(w < 0):
+
+    if not np.all(np.isfinite(v)):
+        raise ValueError("non-finite value")
+
+    if not np.all(np.isfinite(w)):
+        raise ValueError("non-finite weight")
+
+    if not allow_negative and np.any(w < 0):
         raise ValueError("negative weight")
 
     order = np.argsort(v, kind="stable")
@@ -40,12 +65,33 @@ def weighted_quantile(values, weights, q: float) -> float:
     if total <= 0:
         raise ValueError("non-positive total weight")
 
-    k = int(np.searchsorted(cdf, q * total, side="left"))
+    target = q * total
+
+    if allow_negative:
+        # Replicate weights can be negative, so cdf may not be monotone.
+        # Find the first actual crossing rather than using searchsorted.
+        hits = np.flatnonzero(cdf >= target)
+
+        if hits.size == 0:
+            raise ValueError(
+                "replicate cumulative weight never reaches quantile target"
+            )
+
+        k = int(hits[0])
+    else:
+        k = int(
+            np.searchsorted(
+                cdf,
+                target,
+                side="left",
+            )
+        )
+
     return float(v[min(k, v.size - 1)])
 
 
 def replicate_weight_names(weight_col: str) -> list[str]:
-    """Return the 80 ACS replicate-weight columns for a full-sample weight."""
+    """Return the 80 ACS replicate-weight columns."""
     if weight_col == "WGTP":
         prefix = "WGTP"
     elif weight_col == "PWGTP":
@@ -56,7 +102,10 @@ def replicate_weight_names(weight_col: str) -> list[str]:
             "expected WGTP or PWGTP"
         )
 
-    return [f"{prefix}{i}" for i in range(1, REPLICATE_COUNT + 1)]
+    return [
+        f"{prefix}{i}"
+        for i in range(1, REPLICATE_COUNT + 1)
+    ]
 
 
 def sdr_standard_error(
@@ -65,20 +114,32 @@ def sdr_standard_error(
 ) -> float:
     """ACS Successive Difference Replication standard error.
 
-    ACS PUMS supplies 80 replicate weights. For any statistic theta:
-
-        Var(theta) = (4 / 80) * sum((theta_r - theta)^2)
-
-    where theta_r is the statistic recomputed with replicate weight r.
+    Var(theta) =
+        (4 / 80) * sum((theta_r - theta) ** 2)
     """
-    reps = np.asarray(replicate_estimates, dtype=float)
+    reps = np.asarray(
+        replicate_estimates,
+        dtype=float,
+    )
 
     if reps.size != REPLICATE_COUNT:
         raise ValueError(
-            f"expected {REPLICATE_COUNT} replicate estimates, got {reps.size}"
+            f"expected {REPLICATE_COUNT} replicate estimates, "
+            f"got {reps.size}"
         )
 
-    variance = SDR_FACTOR * np.sum((reps - float(full_estimate)) ** 2)
+    if not np.all(np.isfinite(reps)):
+        raise ValueError(
+            "non-finite replicate estimate"
+        )
+
+    variance = (
+        SDR_FACTOR
+        * np.sum(
+            (reps - float(full_estimate)) ** 2
+        )
+    )
+
     return float(math.sqrt(variance))
 
 
@@ -87,16 +148,22 @@ def normal_ci(
     standard_error: float,
     confidence: float = 0.95,
 ) -> tuple[float, float]:
-    """Normal-approximation confidence interval around a survey estimate."""
+    """Normal-approximation confidence interval."""
     if confidence == 0.95:
         z = Z_95
     elif confidence == 0.90:
         z = Z_90
     else:
-        raise ValueError("supported confidence levels are 0.90 and 0.95")
+        raise ValueError(
+            "supported confidence levels are 0.90 and 0.95"
+        )
 
     margin = z * standard_error
-    return float(estimate - margin), float(estimate + margin)
+
+    return (
+        float(estimate - margin),
+        float(estimate + margin),
+    )
 
 
 @dataclass
@@ -108,7 +175,10 @@ class GoldQuantiles:
     ci: dict
     se: dict
     moe90: dict
-    uncertainty_method: str = "acs_sdr_replicate_weights"
+    zero_se_quantiles: list[str]
+    uncertainty_method: str = (
+        "acs_sdr_replicate_weights"
+    )
 
 
 def compute_gold(
@@ -118,20 +188,28 @@ def compute_gold(
     filter_sql: str = "1=1",
     quantiles=(0.1, 0.5, 0.9),
 ) -> GoldQuantiles:
-    """Compute weighted quantiles and ACS replicate-weight uncertainty.
+    """Compute weighted quantiles and ACS SDR uncertainty.
 
-    Point estimates use WGTP/PWGTP. Standard errors use the corresponding
-    80 ACS PUMS replicate weights and the official SDR variance formula.
+    Point estimates use the ordinary full-sample WGTP/PWGTP weights.
+
+    Replicate estimates use the corresponding 80 ACS replicate weights.
+    These replicate weights may legally contain negative values.
     """
-    replicate_cols = replicate_weight_names(weight_col)
+    replicate_cols = replicate_weight_names(
+        weight_col
+    )
 
     select_cols = [
         f"CAST({value_expr} AS DOUBLE)",
         f"CAST({weight_col} AS DOUBLE)",
-        *[f'CAST("{col}" AS DOUBLE)' for col in replicate_cols],
+        *[
+            f'CAST("{col}" AS DOUBLE)'
+            for col in replicate_cols
+        ],
     ]
 
     con = duckdb.connect()
+
     try:
         rows = con.execute(
             f"""
@@ -146,17 +224,26 @@ def compute_gold(
         con.close()
 
     if not rows:
-        raise ValueError("no rows after filtering")
+        raise ValueError(
+            "no rows after filtering"
+        )
 
-    arr = np.asarray(rows, dtype=float)
+    arr = np.asarray(
+        rows,
+        dtype=float,
+    )
 
     vals = arr[:, 0]
     full_weights = arr[:, 1]
     replicate_weights = arr[:, 2:]
 
-    if replicate_weights.shape[1] != REPLICATE_COUNT:
+    if (
+        replicate_weights.shape[1]
+        != REPLICATE_COUNT
+    ):
         raise ValueError(
-            f"expected {REPLICATE_COUNT} ACS replicate-weight columns, "
+            f"expected {REPLICATE_COUNT} "
+            "ACS replicate-weight columns, "
             f"got {replicate_weights.shape[1]}"
         )
 
@@ -170,18 +257,35 @@ def compute_gold(
     se = {}
     ci = {}
     moe90 = {}
+    zero_se_quantiles = []
 
     for q in quantiles:
         if q not in names:
-            raise ValueError(f"unsupported quantile {q}")
+            raise ValueError(
+                f"unsupported quantile {q}"
+            )
 
         name = names[q]
-        estimate = weighted_quantile(vals, full_weights, q)
+
+        # Preserve the original benchmark's point-estimate
+        # definition exactly.
+        estimate = weighted_quantile(
+            vals,
+            full_weights,
+            q,
+        )
 
         replicate_estimates = np.asarray(
             [
-                weighted_quantile(vals, replicate_weights[:, r], q)
-                for r in range(REPLICATE_COUNT)
+                weighted_quantile(
+                    vals,
+                    replicate_weights[:, r],
+                    q,
+                    allow_negative=True,
+                )
+                for r in range(
+                    REPLICATE_COUNT
+                )
             ],
             dtype=float,
         )
@@ -191,14 +295,21 @@ def compute_gold(
             replicate_estimates,
         )
 
+        if standard_error == 0.0:
+            zero_se_quantiles.append(name)
+
         point[name] = estimate
         se[name] = standard_error
+
         ci[name] = normal_ci(
             estimate,
             standard_error,
             confidence=0.95,
         )
-        moe90[name] = Z_90 * standard_error
+
+        moe90[name] = (
+            Z_90 * standard_error
+        )
 
     return GoldQuantiles(
         q10=point["q10"],
@@ -208,6 +319,7 @@ def compute_gold(
         ci=ci,
         se=se,
         moe90=moe90,
+        zero_se_quantiles=zero_se_quantiles,
     )
 
 
