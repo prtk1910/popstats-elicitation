@@ -1,0 +1,6 @@
+experiment,model,cells,requests_or_estimates,purpose
+Historical Ox Alpha quantiles,stealth/ox-alpha,40,120,Historical baseline
+Muse original-prompt replication,muse-spark-1.2,40,160,Replication + predictive interval
+Muse epistemic uncertainty,muse-spark-1.2,40,120,Uncertainty about population median
+Muse elicitation invariance,muse-spark-1.2,20,60,Equivalent prompt transformations
+Muse temporal knowledge,muse-spark-1.2,40,120,2019 / 2021 / 2023 knowledge
