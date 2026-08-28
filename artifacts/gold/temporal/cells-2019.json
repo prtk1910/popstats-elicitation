@@ -1,0 +1,3082 @@
+{
+  "ca:commute:age25_34": {
+    "cell_key": "ca:commute:age25_34",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [
+      "age25_34"
+    ],
+    "population_nl": "people in California who commute to work, specifically workers aged 25 to 34",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34)",
+    "n_unweighted": 37286,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:commute:age25_34+female": {
+    "cell_key": "ca:commute:age25_34+female",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [
+      "age25_34",
+      "female"
+    ],
+    "population_nl": "people in California who commute to work, specifically workers aged 25 to 34 and women",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+    "n_unweighted": 17242,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:commute:age55_64": {
+    "cell_key": "ca:commute:age55_64",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [
+      "age55_64"
+    ],
+    "population_nl": "people in California who commute to work, specifically workers aged 55 to 64",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 29543,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:commute:female": {
+    "cell_key": "ca:commute:female",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [
+      "female"
+    ],
+    "population_nl": "people in California who commute to work, specifically women",
+    "filter_sql": "(JWMNP > 0) AND (SEX = 2)",
+    "n_unweighted": 76855,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 20.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        20.0,
+        20.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 20.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        20.0,
+        20.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:commute:female+age55_64": {
+    "cell_key": "ca:commute:female+age55_64",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [
+      "female",
+      "age55_64"
+    ],
+    "population_nl": "people in California who commute to work, specifically women and workers aged 55 to 64",
+    "filter_sql": "(JWMNP > 0) AND (SEX = 2) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 13807,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 20.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        20.0,
+        20.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 20.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        20.0,
+        20.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:commute:marginal": {
+    "cell_key": "ca:commute:marginal",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "commute",
+    "dims": [],
+    "population_nl": "people in California who commute to work",
+    "filter_sql": "(JWMNP > 0)",
+    "n_unweighted": 165979,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ca:income:marginal": {
+    "cell_key": "ca:income:marginal",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "income",
+    "dims": [],
+    "population_nl": "households in California",
+    "filter_sql": "(HINCP > 0)",
+    "n_unweighted": 134094,
+    "gold_year_dollars": {
+      "q10": 19394.784,
+      "q50": 80912.6145,
+      "q90": 234959.727
+    },
+    "se_year_dollars": {
+      "q10": 154.3077082070705,
+      "q50": 413.62940063330086,
+      "q90": 1382.4564141956118
+    },
+    "moe90_year_dollars": {
+      "q10": 253.81359351096938,
+      "q50": 680.3598198454484,
+      "q90": 2273.9384469919787
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        19092.346449377226,
+        19697.221550622773
+      ],
+      "q50": [
+        80101.91577181184,
+        81723.31322818816
+      ],
+      "q90": [
+        232250.16221798022,
+        237669.2917820198
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 23115.46124052148,
+      "q50": 96434.81486280054,
+      "q90": 280034.1814867342
+    },
+    "se_2023_dollars": {
+      "q10": 183.9099547679539,
+      "q50": 492.97967836502824,
+      "q90": 1647.6655609595327
+    },
+    "moe90_2023_dollars": {
+      "q10": 302.5049561325502,
+      "q50": 810.8794119720869,
+      "q90": 2710.1686739473193
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        22755.004352777898,
+        23475.918128265057
+      ],
+      "q50": [
+        95468.59244809495,
+        97401.03727750614
+      ],
+      "q90": [
+        276804.8163286865,
+        283263.54664478183
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:income:renter": {
+    "cell_key": "ca:income:renter",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "income",
+    "dims": [
+      "renter"
+    ],
+    "population_nl": "households in California, specifically renter households",
+    "filter_sql": "(HINCP > 0) AND (TEN IN (2, 3))",
+    "n_unweighted": 77528,
+    "gold_year_dollars": {
+      "q10": 15051.1605,
+      "q50": 62426.961,
+      "q90": 184048.419
+    },
+    "se_year_dollars": {
+      "q10": 237.28733927910946,
+      "q50": 574.7316716778431,
+      "q90": 1284.4898324713095
+    },
+    "moe90_year_dollars": {
+      "q10": 390.30294064290774,
+      "q50": 945.349474683183,
+      "q90": 2112.7977597227223
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        14586.08586102561,
+        15516.23513897439
+      ],
+      "q50": [
+        61300.50762273693,
+        63553.41437726308
+      ],
+      "q90": [
+        181530.86518984835,
+        186565.97281015164
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 17938.56106686302,
+      "q50": 74402.89086792851,
+      "q90": 219356.09573036528
+    },
+    "se_2023_dollars": {
+      "q10": 282.80832073060077,
+      "q50": 684.9876585565119,
+      "q90": 1530.905161734953
+    },
+    "moe90_2023_dollars": {
+      "q10": 465.17829208578394,
+      "q50": 1126.7044345936752,
+      "q90": 2518.114907798468
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        17384.26694370279,
+        18492.855190023252
+      ],
+      "q50": [
+        73060.33972730332,
+        75745.4420085537
+      ],
+      "q90": [
+        216355.5767496183,
+        222356.61471111223
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:income:size1": {
+    "cell_key": "ca:income:size1",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "income",
+    "dims": [
+      "size1"
+    ],
+    "population_nl": "households in California, specifically single-person households",
+    "filter_sql": "(HINCP > 0) AND (NP = 1)",
+    "n_unweighted": 31515,
+    "gold_year_dollars": {
+      "q10": 10808.5515,
+      "q50": 43436.235,
+      "q90": 136672.6185
+    },
+    "se_year_dollars": {
+      "q10": 226.59693684156076,
+      "q50": 689.6820007078695,
+      "q90": 1770.4804815945606
+    },
+    "moe90_year_dollars": {
+      "q10": 372.7187934199349,
+      "q50": 1134.425940307487,
+      "q90": 2912.1812415976024
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10364.429664783444,
+        11252.673335216556
+      ],
+      "q50": [
+        42084.48311782705,
+        44787.986882172954
+      ],
+      "q90": [
+        133202.54052074355,
+        140142.69647925647
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 12882.053920498949,
+      "q50": 51769.00173658456,
+      "q90": 162891.7659292998
+    },
+    "se_2023_dollars": {
+      "q10": 270.06708147829806,
+      "q50": 821.9899513007242,
+      "q90": 2110.127802887563
+    },
+    "moe90_2023_dollars": {
+      "q10": 444.22081848977734,
+      "q50": 1352.0531527146602,
+      "q90": 3470.85136991075
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        12352.73216739164,
+        13411.375673606257
+      ],
+      "q50": [
+        50157.931036381306,
+        53380.072436787814
+      ],
+      "q90": [
+        158755.99143286355,
+        167027.54042573605
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:income:size24": {
+    "cell_key": "ca:income:size24",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "income",
+    "dims": [
+      "size24"
+    ],
+    "population_nl": "households in California, specifically households of two to four people",
+    "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4)",
+    "n_unweighted": 85729,
+    "gold_year_dollars": {
+      "q10": 27172.9005,
+      "q50": 94953.63,
+      "q90": 262132.6275
+    },
+    "se_year_dollars": {
+      "q10": 327.2152643186953,
+      "q50": 565.2842180250427,
+      "q90": 1446.429232164164
+    },
+    "moe90_year_dollars": {
+      "q10": 538.2212143084906,
+      "q50": 929.8097962769183,
+      "q90": 2379.164368653858
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        26531.570366743603,
+        27814.230633256397
+      ],
+      "q50": [
+        93845.69329164203,
+        96061.56670835798
+      ],
+      "q90": [
+        259297.6782987723,
+        264967.5767012277
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 32385.724342188947,
+      "q50": 113169.44565671975,
+      "q90": 312419.9058289231
+    },
+    "se_2023_dollars": {
+      "q10": 389.9879348832032,
+      "q50": 673.7278142224408,
+      "q90": 1723.9108645524475
+    },
+    "moe90_2023_dollars": {
+      "q10": 641.4730691599514,
+      "q50": 1108.1836388018694,
+      "q90": 2835.5810381001415
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        31621.362035412716,
+        33150.086648965174
+      ],
+      "q50": [
+        111848.96340546086,
+        114489.92790797862
+      ],
+      "q90": [
+        309041.102621843,
+        315798.7090360032
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:income:size24+renter": {
+    "cell_key": "ca:income:size24+renter",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "income",
+    "dims": [
+      "size24",
+      "renter"
+    ],
+    "population_nl": "households in California, specifically households of two to four people and renter households",
+    "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4) AND (TEN IN (2, 3))",
+    "n_unweighted": 46178,
+    "gold_year_dollars": {
+      "q10": 21617.103,
+      "q50": 73902.2082,
+      "q90": 207079.725
+    },
+    "se_year_dollars": {
+      "q10": 332.0981313843661,
+      "q50": 648.8009646343357,
+      "q90": 784.7695518107511
+    },
+    "moe90_year_dollars": {
+      "q10": 546.2528159113812,
+      "q50": 1067.182619848401,
+      "q90": 1290.8310436169952
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        20966.20262315359,
+        22268.00337684641
+      ],
+      "q50": [
+        72630.58167618186,
+        75173.83472381813
+      ],
+      "q90": [
+        205541.6049422873,
+        208617.84505771272
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 25764.107840997898,
+      "q50": 88079.53876857038,
+      "q90": 246805.70595348455
+    },
+    "se_2023_dollars": {
+      "q10": 395.80752660431403,
+      "q50": 773.2663354651402,
+      "q90": 935.3190093595695
+    },
+    "moe90_2023_dollars": {
+      "q10": 651.0454457097973,
+      "q50": 1271.9099364893095,
+      "q90": 1538.462864901746
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        24988.33934404356,
+        26539.87633795223
+      ],
+      "q50": [
+        86563.96460060144,
+        89595.11293653931
+      ],
+      "q90": [
+        244972.5143810841,
+        248638.897525885
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:age25_34": {
+    "cell_key": "ca:wages:age25_34",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "age25_34"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34)",
+    "n_unweighted": 40543,
+    "gold_year_dollars": {
+      "q10": 11111.595,
+      "q50": 37375.365,
+      "q90": 101014.5
+    },
+    "se_year_dollars": {
+      "q10": 221.31168114042183,
+      "q50": 894.1352546584293,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 364.0253214105506,
+      "q50": 1470.7216166100957,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10677.83207560676,
+        11545.357924393238
+      ],
+      "q50": [
+        35622.89210356193,
+        39127.83789643807
+      ],
+      "q90": [
+        101014.5,
+        101014.5
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 13243.233002382096,
+      "q50": 44545.4200989216,
+      "q90": 120393.0272943827
+    },
+    "se_2023_dollars": {
+      "q10": 263.7679072618736,
+      "q50": 1065.6653264527579,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 433.8595989330923,
+      "q50": 1752.8634773322433,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        12726.257403871323,
+        13760.208600892869
+      ],
+      "q50": [
+        42456.75443950107,
+        46634.08575834212
+      ],
+      "q90": [
+        120393.0272943827,
+        120393.0272943827
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:age25_34+female": {
+    "cell_key": "ca:wages:age25_34+female",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "age25_34",
+      "female"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+    "n_unweighted": 19002,
+    "gold_year_dollars": {
+      "q10": 10101.45,
+      "q50": 35355.075,
+      "q90": 90913.05
+    },
+    "se_year_dollars": {
+      "q10": 127.774358681232,
+      "q50": 0.0,
+      "q90": 1764.1424004672192
+    },
+    "moe90_year_dollars": {
+      "q10": 210.17011730822279,
+      "q50": 0.0,
+      "q90": 2901.756025867382
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        9851.016858837083,
+        10351.883141162918
+      ],
+      "q50": [
+        35355.075,
+        35355.075
+      ],
+      "q90": [
+        87455.39443148422,
+        94370.70556851578
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 12039.30272943827,
+      "q50": 42137.55955303394,
+      "q90": 108353.72456494444
+    },
+    "se_2023_dollars": {
+      "q10": 152.28647226122794,
+      "q50": 0.0,
+      "q90": 2102.5738301989095
+    },
+    "moe90_2023_dollars": {
+      "q10": 250.48895623452555,
+      "q50": 0.0,
+      "q90": 3458.426190535925
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        11740.826728473607,
+        12337.778730402935
+      ],
+      "q50": [
+        42137.55955303394,
+        42137.55955303394
+      ],
+      "q90": [
+        104232.75558291814,
+        112474.69354697072
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:age25_34+female+bach": {
+    "cell_key": "ca:wages:age25_34+female+bach",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "age25_34",
+      "female",
+      "bach"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 10043,
+    "gold_year_dollars": {
+      "q10": 14041.0155,
+      "q50": 54547.83,
+      "q90": 121217.4
+    },
+    "se_year_dollars": {
+      "q10": 1058.2444097773143,
+      "q50": 1410.5907259012963,
+      "q90": 638.8717934061555
+    },
+    "moe90_year_dollars": {
+      "q10": 1740.6571556233355,
+      "q50": 2320.2152716428573,
+      "q90": 1050.8505865411064
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        11966.894569995617,
+        16115.136430004382
+      ],
+      "q50": [
+        51783.12298030725,
+        57312.537019692754
+      ],
+      "q90": [
+        119965.23429418541,
+        122469.56570581457
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 16734.630793919194,
+      "q50": 65012.23473896666,
+      "q90": 144471.63275325924
+    },
+    "se_2023_dollars": {
+      "q10": 1261.257028549843,
+      "q50": 1681.1971327347844,
+      "q90": 761.4323613061342
+    },
+    "moe90_2023_dollars": {
+      "q10": 2074.5831979282457,
+      "q50": 2765.3232013992256,
+      "q90": 1252.4447811726186
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        14262.612442713495,
+        19206.649145124895
+      ],
+      "q50": [
+        61717.14890789448,
+        68307.32057003884
+      ],
+      "q90": [
+        142979.25274843592,
+        145964.01275808254
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:age55_64": {
+    "cell_key": "ca:wages:age55_64",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "age55_64"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 55 to 64",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 31567,
+    "gold_year_dollars": {
+      "q10": 12626.8125,
+      "q50": 50507.25,
+      "q90": 151521.75
+    },
+    "se_year_dollars": {
+      "q10": 498.46331486839404,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 819.8991913635316,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        11649.8423552435,
+        13603.7826447565
+      ],
+      "q50": [
+        50507.25,
+        50507.25
+      ],
+      "q90": [
+        151521.75,
+        151521.75
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 15049.128411797838,
+      "q50": 60196.51364719135,
+      "q90": 180589.54094157406
+    },
+    "se_2023_dollars": {
+      "q10": 594.0880514401302,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 977.1878861398311,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        13884.737227329604,
+        16213.519596266071
+      ],
+      "q50": [
+        60196.51364719135,
+        60196.51364719135
+      ],
+      "q90": [
+        180589.54094157406,
+        180589.54094157406
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:age55_64+bach": {
+    "cell_key": "ca:wages:age55_64+bach",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "age55_64",
+      "bach"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 55 to 64 and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 12244,
+    "gold_year_dollars": {
+      "q10": 19192.755,
+      "q50": 85862.325,
+      "q90": 222231.9
+    },
+    "se_year_dollars": {
+      "q10": 941.6588811086126,
+      "q50": 2007.623480149795,
+      "q90": 3806.5180255129535
+    },
+    "moe90_year_dollars": {
+      "q10": 1548.8910259425666,
+      "q50": 3302.246762877327,
+      "q90": 6261.1649803211385
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        17347.137507304837,
+        21038.372492695165
+      ],
+      "q50": [
+        81927.45528438943,
+        89797.19471561056
+      ],
+      "q90": [
+        214771.26176349208,
+        229692.5382365079
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 22874.675185932712,
+      "q50": 102334.07320022529,
+      "q90": 264864.66004764196
+    },
+    "se_2023_dollars": {
+      "q10": 1122.3058409961645,
+      "q50": 2392.764092704689,
+      "q90": 4536.756886804773
+    },
+    "moe90_2023_dollars": {
+      "q10": 1846.0288331113636,
+      "q50": 3935.746696324557,
+      "q90": 7462.301019857901
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        20674.996157941296,
+        25074.354213924133
+      ],
+      "q50": [
+        97644.34175502344,
+        107023.80464542714
+      ],
+      "q90": [
+        255972.7799428905,
+        273756.54015239334
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:bach": {
+    "cell_key": "ca:wages:bach",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "bach"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 73867,
+    "gold_year_dollars": {
+      "q10": 15152.175,
+      "q50": 73740.585,
+      "q90": 191927.55
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 1428.5607589633744,
+      "q90": 3395.6501597753554
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 2349.773345701454,
+      "q90": 5585.347481164839
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        15152.175,
+        15152.175
+      ],
+      "q50": [
+        70940.65736270459,
+        76540.51263729543
+      ],
+      "q90": [
+        185272.19798274263,
+        198582.90201725735
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 18058.954094157405,
+      "q50": 87886.90992489937,
+      "q90": 228746.7518593271
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 1702.6145201487072,
+      "q90": 4047.068513609525
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 2800.551668766842,
+      "q90": 6656.835323131731
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        18058.954094157405,
+        18058.954094157405
+      ],
+      "q50": [
+        84549.84678585296,
+        91223.97306394578
+      ],
+      "q90": [
+        220814.64332968643,
+        236678.86038896782
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:female": {
+    "cell_key": "ca:wages:female",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "female"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically women",
+    "filter_sql": "(WAGP >= 1000) AND (SEX = 2)",
+    "n_unweighted": 85118,
+    "gold_year_dollars": {
+      "q10": 7071.015,
+      "q50": 35355.075,
+      "q90": 106065.225
+    },
+    "se_year_dollars": {
+      "q10": 22.587528871315303,
+      "q50": 0.0,
+      "q90": 225.87528871315342
+    },
+    "moe90_year_dollars": {
+      "q10": 37.15317878785407,
+      "q50": 0.0,
+      "q90": 371.53178787854137
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        7026.744256912463,
+        7115.285743087537
+      ],
+      "q50": [
+        35355.075,
+        35355.075
+      ],
+      "q90": [
+        105622.51756912464,
+        106507.93243087537
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 8427.511910606789,
+      "q50": 42137.55955303394,
+      "q90": 126412.67865910185
+    },
+    "se_2023_dollars": {
+      "q10": 26.920699304722792,
+      "q50": 0.0,
+      "q90": 269.2069930472284
+    },
+    "moe90_2023_dollars": {
+      "q10": 44.280609891443255,
+      "q50": 0.0,
+      "q90": 442.8060989144334
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        8374.7483095309,
+        8480.27551168268
+      ],
+      "q50": [
+        42137.55955303394,
+        42137.55955303394
+      ],
+      "q90": [
+        125885.04264834295,
+        126940.31466986073
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:female+bach": {
+    "cell_key": "ca:wages:female+bach",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [
+      "female",
+      "bach"
+    ],
+    "population_nl": "people in California with wage earnings of at least $1,000, specifically women and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 36950,
+    "gold_year_dollars": {
+      "q10": 12121.74,
+      "q50": 60608.7,
+      "q90": 146471.025
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 2432.7513111588414
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 4001.51981763057
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        12121.74,
+        12121.74
+      ],
+      "q50": [
+        60608.7,
+        60608.7
+      ],
+      "q90": [
+        141702.92004678608,
+        151239.1299532139
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 14447.163275325924,
+      "q50": 72235.81637662962,
+      "q90": 174569.8895768549
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 2899.4480495848784
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 4769.167640517059
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        14447.163275325924,
+        14447.163275325924
+      ],
+      "q50": [
+        72235.81637662962,
+        72235.81637662962
+      ],
+      "q90": [
+        168887.07582462367,
+        180252.70332908616
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ca:wages:marginal": {
+    "cell_key": "ca:wages:marginal",
+    "year": 2019,
+    "state": "ca",
+    "outcome": "wages",
+    "dims": [],
+    "population_nl": "people in California with wage earnings of at least $1,000",
+    "filter_sql": "(WAGP >= 1000)",
+    "n_unweighted": 180671,
+    "gold_year_dollars": {
+      "q10": 8485.218,
+      "q50": 40405.8,
+      "q90": 126268.125
+    },
+    "se_year_dollars": {
+      "q10": 174.96224630116575,
+      "q50": 0.0,
+      "q90": 1807.002309705221
+    },
+    "moe90_year_dollars": {
+      "q10": 287.7872854080493,
+      "q50": 0.0,
+      "q90": 2972.2543030283205
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        8142.2982985954895,
+        8828.137701404512
+      ],
+      "q50": [
+        40405.8,
+        40405.8
+      ],
+      "q90": [
+        122726.46555299708,
+        129809.78444700292
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10113.014292728147,
+      "q50": 48157.21091775308,
+      "q90": 150491.2841179784
+    },
+    "se_2023_dollars": {
+      "q10": 208.52684015089673,
+      "q50": 0.0,
+      "q90": 2153.6559443778197
+    },
+    "moe90_2023_dollars": {
+      "q10": 342.99612933893235,
+      "q50": 0.0,
+      "q90": 3542.448791315455
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        9704.30919622245,
+        10521.719389233846
+      ],
+      "q50": [
+        48157.21091775308,
+        48157.21091775308
+      ],
+      "q90": [
+        146270.19603190725,
+        154712.3722040495
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:commute:age25_34": {
+    "cell_key": "ny:commute:age25_34",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [
+      "age25_34"
+    ],
+    "population_nl": "people in New York State who commute to work, specifically workers aged 25 to 34",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34)",
+    "n_unweighted": 19293,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:commute:age25_34+female": {
+    "cell_key": "ny:commute:age25_34+female",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [
+      "age25_34",
+      "female"
+    ],
+    "population_nl": "people in New York State who commute to work, specifically workers aged 25 to 34 and women",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+    "n_unweighted": 9484,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:commute:age55_64": {
+    "cell_key": "ny:commute:age55_64",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [
+      "age55_64"
+    ],
+    "population_nl": "people in New York State who commute to work, specifically workers aged 55 to 64",
+    "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 17683,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 65.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 5.220153254455275,
+      "q90": 5.2345009313209605
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 8.586388013833291,
+      "q90": 8.609987842164141
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        19.768687627488106,
+        40.231312372511894
+      ],
+      "q90": [
+        54.74056669756955,
+        75.25943330243045
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 65.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 5.220153254455275,
+      "q90": 5.2345009313209605
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 8.586388013833291,
+      "q90": 8.609987842164141
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        19.768687627488106,
+        40.231312372511894
+      ],
+      "q90": [
+        54.74056669756955,
+        75.25943330243045
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:commute:female": {
+    "cell_key": "ny:commute:female",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [
+      "female"
+    ],
+    "population_nl": "people in New York State who commute to work, specifically women",
+    "filter_sql": "(JWMNP > 0) AND (SEX = 2)",
+    "n_unweighted": 43868,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:commute:female+age55_64": {
+    "cell_key": "ny:commute:female+age55_64",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [
+      "female",
+      "age55_64"
+    ],
+    "population_nl": "people in New York State who commute to work, specifically women and workers aged 55 to 64",
+    "filter_sql": "(JWMNP > 0) AND (SEX = 2) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 8785,
+    "gold_year_dollars": {
+      "q10": 8.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 1.02469507659596,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 1.6854734132581812,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        5.9916345547364065,
+        10.008365445263593
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 8.0,
+      "q50": 25.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 1.02469507659596,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 1.6854734132581812,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        5.9916345547364065,
+        10.008365445263593
+      ],
+      "q50": [
+        25.0,
+        25.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:commute:marginal": {
+    "cell_key": "ny:commute:marginal",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "commute",
+    "dims": [],
+    "population_nl": "people in New York State who commute to work",
+    "filter_sql": "(JWMNP > 0)",
+    "n_unweighted": 89304,
+    "gold_year_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 10.0,
+      "q50": 30.0,
+      "q90": 60.0
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10.0,
+        10.0
+      ],
+      "q50": [
+        30.0,
+        30.0
+      ],
+      "q90": [
+        60.0,
+        60.0
+      ]
+    },
+    "adjinc_factor": null,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.0,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": null,
+    "commute_valid_range_minutes": [
+      1,
+      200
+    ]
+  },
+  "ny:income:marginal": {
+    "cell_key": "ny:income:marginal",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "income",
+    "dims": [],
+    "population_nl": "households in New York State",
+    "filter_sql": "(HINCP > 0)",
+    "n_unweighted": 75612,
+    "gold_year_dollars": {
+      "q10": 15152.175,
+      "q50": 73740.585,
+      "q90": 222736.9725
+    },
+    "se_year_dollars": {
+      "q10": 61.81724265315199,
+      "q50": 368.27370948526095,
+      "q90": 1335.377686955525
+    },
+    "moe90_year_dollars": {
+      "q10": 101.68031578617631,
+      "q50": 605.7563467577043,
+      "q90": 2196.500831738863
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        15031.015430776248,
+        15273.33456922375
+      ],
+      "q50": [
+        73018.78179295592,
+        74462.38820704409
+      ],
+      "q90": [
+        220119.68032780878,
+        225354.26467219123
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 18058.954094157405,
+      "q50": 87886.90992489937,
+      "q90": 265466.62518411386
+    },
+    "se_2023_dollars": {
+      "q10": 73.67620472312792,
+      "q50": 438.9229938064593,
+      "q90": 1591.5552946749838
+    },
+    "moe90_2023_dollars": {
+      "q10": 121.18657255885617,
+      "q50": 721.9640783149532,
+      "q90": 2617.8754989399663
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        17914.551386382474,
+        18203.356801932336
+      ],
+      "q50": [
+        87026.63666505221,
+        88747.18318474654
+      ],
+      "q90": [
+        262347.23412714683,
+        268586.0162410808
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:income:renter": {
+    "cell_key": "ny:income:renter",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "income",
+    "dims": [
+      "renter"
+    ],
+    "population_nl": "households in New York State, specifically renter households",
+    "filter_sql": "(HINCP > 0) AND (TEN IN (2, 3))",
+    "n_unweighted": 46829,
+    "gold_year_dollars": {
+      "q10": 12121.74,
+      "q50": 57578.265,
+      "q90": 186876.825
+    },
+    "se_year_dollars": {
+      "q10": 88.06239946645775,
+      "q50": 458.42111871629476,
+      "q90": 1512.0170109893386
+    },
+    "moe90_year_dollars": {
+      "q10": 144.8497571604524,
+      "q50": 754.0356397916488,
+      "q90": 2487.0466645381375
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        11949.140868653563,
+        12294.339131346436
+      ],
+      "q50": [
+        56679.7761175635,
+        58476.7538824365
+      ],
+      "q90": [
+        183913.326114449,
+        189840.323885551
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 14447.163275325924,
+      "q50": 68624.02555779814,
+      "q90": 222727.10049460802
+    },
+    "se_2023_dollars": {
+      "q10": 104.9562078966295,
+      "q50": 546.3641977927161,
+      "q90": 1802.0809415837368
+    },
+    "moe90_2023_dollars": {
+      "q10": 172.63759922984377,
+      "q50": 898.6891323757807,
+      "q90": 2964.1593728241337
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        14241.452887894631,
+        14652.873662757216
+      ],
+      "q50": [
+        67553.1714076823,
+        69694.87970791398
+      ],
+      "q90": [
+        219195.08675187785,
+        226259.11423733816
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:income:size1": {
+    "cell_key": "ny:income:size1",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "income",
+    "dims": [
+      "size1"
+    ],
+    "population_nl": "households in New York State, specifically single-person households",
+    "filter_sql": "(HINCP > 0) AND (NP = 1)",
+    "n_unweighted": 21578,
+    "gold_year_dollars": {
+      "q10": 9495.363,
+      "q50": 38385.51,
+      "q90": 122025.516
+    },
+    "se_year_dollars": {
+      "q10": 136.16364924246227,
+      "q50": 773.9912661035405,
+      "q90": 1645.222017201988
+    },
+    "moe90_year_dollars": {
+      "q10": 223.96927231541216,
+      "q50": 1273.1023412791706,
+      "q90": 2706.1494021351073
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        9228.48715148123,
+        9762.23884851877
+      ],
+      "q50": [
+        36868.5149940885,
+        39902.5050059115
+      ],
+      "q90": [
+        118800.94009971176,
+        125250.09190028824
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 11316.944565671973,
+      "q50": 45749.350371865425,
+      "q90": 145434.7769716143
+    },
+    "se_2023_dollars": {
+      "q10": 162.28515648496514,
+      "q50": 922.473027393269,
+      "q90": 1960.8398717245375
+    },
+    "moe90_2023_dollars": {
+      "q10": 266.9353282446822,
+      "q50": 1517.3331048727232,
+      "q90": 3225.294574877165
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        10998.871503735996,
+        11635.017627607951
+      ],
+      "q50": [
+        43941.33646146498,
+        47557.36428226587
+      ],
+      "q90": [
+        141591.60144358408,
+        149277.95249964454
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:income:size24": {
+    "cell_key": "ny:income:size24",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "income",
+    "dims": [
+      "size24"
+    ],
+    "population_nl": "households in New York State, specifically households of two to four people",
+    "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4)",
+    "n_unweighted": 47004,
+    "gold_year_dollars": {
+      "q10": 24445.509,
+      "q50": 90913.05,
+      "q90": 247485.525
+    },
+    "se_year_dollars": {
+      "q10": 469.092457218236,
+      "q50": 394.215476449245,
+      "q90": 1579.5596376457868
+    },
+    "moe90_year_dollars": {
+      "q10": 771.5884296309938,
+      "q50": 648.4267562379433,
+      "q90": 2598.1443989678255
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        23526.10467843286,
+        25364.913321567135
+      ],
+      "q50": [
+        90140.40186401119,
+        91685.69813598882
+      ],
+      "q90": [
+        244389.64499878112,
+        250581.40500121887
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 29135.11260524061,
+      "q50": 108353.72456494444,
+      "q90": 294962.9168712376
+    },
+    "se_2023_dollars": {
+      "q10": 559.0827159018174,
+      "q50": 469.8414051054258,
+      "q90": 1882.5808826276866
+    },
+    "moe90_2023_dollars": {
+      "q10": 919.6092330169839,
+      "q50": 772.8203392796356,
+      "q90": 3096.569992819654
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        28039.330617694213,
+        30230.89459278701
+      ],
+      "q50": [
+        107432.85233249211,
+        109274.59679739675
+      ],
+      "q90": [
+        291273.1261433037,
+        298652.7075991715
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:income:size24+renter": {
+    "cell_key": "ny:income:size24+renter",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "income",
+    "dims": [
+      "size24",
+      "renter"
+    ],
+    "population_nl": "households in New York State, specifically households of two to four people and renter households",
+    "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4) AND (TEN IN (2, 3))",
+    "n_unweighted": 26959,
+    "gold_year_dollars": {
+      "q10": 18990.726,
+      "q50": 73336.527,
+      "q90": 215170.98645
+    },
+    "se_year_dollars": {
+      "q10": 390.5814174507574,
+      "q50": 734.0634126115278,
+      "q90": 2445.4189696741632
+    },
+    "moe90_year_dollars": {
+      "q10": 642.4492611137254,
+      "q50": 1207.4268666464466,
+      "q90": 4022.3562616844797
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        18225.20048876591,
+        19756.251511234088
+      ],
+      "q50": [
+        71897.78914891284,
+        74775.26485108717
+      ],
+      "q90": [
+        210378.0533423276,
+        219963.9195576724
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 22633.889131343945,
+      "q50": 87405.33781572184,
+      "q90": 256449.1874397646
+    },
+    "se_2023_dollars": {
+      "q10": 465.51019162424916,
+      "q50": 874.8854517950134,
+      "q90": 2914.5458598734117
+    },
+    "moe90_2023_dollars": {
+      "q10": 765.6961270760211,
+      "q50": 1439.0585085521052,
+      "q90": 4794.001328529179
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        21721.50592132408,
+        23546.272341363816
+      ],
+      "q50": [
+        85690.59383960556,
+        89120.08179183812
+      ],
+      "q90": [
+        250736.78252312238,
+        262161.5923564068
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:age25_34": {
+    "cell_key": "ny:wages:age25_34",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "age25_34"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34)",
+    "n_unweighted": 20808,
+    "gold_year_dollars": {
+      "q10": 12121.74,
+      "q50": 42426.09,
+      "q90": 102024.645
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 244.32148059465186,
+      "q90": 2178.262399888091
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 401.8730734982668,
+      "q90": 3582.9228089079443
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        12121.74,
+        12121.74
+      ],
+      "q50": [
+        41947.22869738498,
+        42904.951302615016
+      ],
+      "q90": [
+        97755.32914734156,
+        106293.96085265845
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 14447.163275325924,
+      "q50": 50565.07146364073,
+      "q90": 121596.95756732654
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 291.19188514357757,
+      "q90": 2596.1382233645118
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 478.96802841725,
+      "q90": 4270.267372768469
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        14447.163275325924,
+        14447.163275325924
+      ],
+      "q50": [
+        49994.34585616899,
+        51135.797071112465
+      ],
+      "q90": [
+        116508.62015064429,
+        126685.29498400878
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:age25_34+female": {
+    "cell_key": "ny:wages:age25_34+female",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "age25_34",
+      "female"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+    "n_unweighted": 10378,
+    "gold_year_dollars": {
+      "q10": 11111.595,
+      "q50": 40405.8,
+      "q90": 97984.065
+    },
+    "se_year_dollars": {
+      "q10": 654.6487812793201,
+      "q50": 0.0,
+      "q90": 3226.1444162428693
+    },
+    "moe90_year_dollars": {
+      "q10": 1076.8014222666507,
+      "q50": 0.0,
+      "q90": 5306.535344126323
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        9828.506966169492,
+        12394.683033830506
+      ],
+      "q50": [
+        40405.8,
+        40405.8
+      ],
+      "q90": [
+        91660.93813523898,
+        104307.19186476103
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 13243.233002382096,
+      "q50": 48157.21091775308,
+      "q90": 116781.23647555122
+    },
+    "se_2023_dollars": {
+      "q10": 780.2359917912336,
+      "q50": 0.0,
+      "q90": 3845.0449466200207
+    },
+    "moe90_2023_dollars": {
+      "q10": 1283.3740009758894,
+      "q50": 0.0,
+      "q90": 6324.536126239371
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        11713.998559029389,
+        14772.467445734803
+      ],
+      "q50": [
+        48157.21091775308,
+        48157.21091775308
+      ],
+      "q90": [
+        109245.08686123823,
+        124317.3860898642
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:age25_34+female+bach": {
+    "cell_key": "ny:wages:age25_34+female+bach",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "age25_34",
+      "female",
+      "bach"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 6358,
+    "gold_year_dollars": {
+      "q10": 18687.6825,
+      "q50": 56568.12,
+      "q90": 116166.675
+    },
+    "se_year_dollars": {
+      "q10": 1150.8562079992664,
+      "q50": 1410.5907259012984,
+      "q90": 3113.4759915145482
+    },
+    "moe90_year_dollars": {
+      "q10": 1892.9900078272112,
+      "q50": 2320.2152716428604,
+      "q90": 5121.212277069036
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        16432.0457809371,
+        20943.319219062898
+      ],
+      "q50": [
+        53803.41298030724,
+        59332.82701969276
+      ],
+      "q90": [
+        110064.37418990135,
+        122268.97581009865
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 22272.7100494608,
+      "q50": 67420.09528485431,
+      "q90": 138451.9813885401
+    },
+    "se_2023_dollars": {
+      "q10": 1371.6353876083676,
+      "q50": 1681.1971327347867,
+      "q90": 3710.7623165665946
+    },
+    "moe90_2023_dollars": {
+      "q10": 2256.139442162612,
+      "q50": 2765.3232013992297,
+      "q90": 6103.66085515941
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        19584.35408982776,
+        24961.066009093836
+      ],
+      "q50": [
+        64125.00945378212,
+        70715.1811159265
+      ],
+      "q90": [
+        131179.02089288118,
+        145724.94188419904
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:age55_64": {
+    "cell_key": "ny:wages:age55_64",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "age55_64"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 55 to 64",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64)",
+    "n_unweighted": 18970,
+    "gold_year_dollars": {
+      "q10": 12626.8125,
+      "q50": 50507.25,
+      "q90": 141420.3
+    },
+    "se_year_dollars": {
+      "q10": 646.808393282161,
+      "q50": 0.0,
+      "q90": 2757.159273897015
+    },
+    "moe90_year_dollars": {
+      "q10": 1063.9051316328166,
+      "q50": 0.0,
+      "q90": 4535.123431752392
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        11359.091344268745,
+        13894.533655731255
+      ],
+      "q50": [
+        50507.25,
+        50507.25
+      ],
+      "q90": [
+        136016.36712352122,
+        146824.23287647875
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 15049.128411797838,
+      "q50": 60196.51364719135,
+      "q90": 168550.23821213577
+    },
+    "se_2023_dollars": {
+      "q10": 770.8915110865769,
+      "q50": 0.0,
+      "q90": 3286.09013277543
+    },
+    "moe90_2023_dollars": {
+      "q10": 1268.003697996857,
+      "q50": 0.0,
+      "q90": 5405.137273385111
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        13538.208814080486,
+        16560.048009515187
+      ],
+      "q50": [
+        60196.51364719135,
+        60196.51364719135
+      ],
+      "q90": [
+        162109.61990194346,
+        174990.85652232807
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:age55_64+bach": {
+    "cell_key": "ny:wages:age55_64+bach",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "age55_64",
+      "bach"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 55 to 64 and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 7169,
+    "gold_year_dollars": {
+      "q10": 18384.639,
+      "q50": 82831.89,
+      "q90": 222231.9
+    },
+    "se_year_dollars": {
+      "q10": 1517.0683021445966,
+      "q50": 2142.8411384450537,
+      "q90": 8463.544355407786
+    },
+    "moe90_year_dollars": {
+      "q10": 2495.3552991156516,
+      "q50": 3524.6600185521684,
+      "q90": 13921.291629857158
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        15411.23976570926,
+        21358.038234290736
+      ],
+      "q50": [
+        78631.99854405689,
+        87031.78145594311
+      ],
+      "q90": [
+        205643.65788184345,
+        238820.14211815654
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 21911.53096757765,
+      "q50": 98722.28238139382,
+      "q90": 264864.66004764196
+    },
+    "se_2023_dollars": {
+      "q10": 1808.1012677144097,
+      "q50": 2553.9217802230514,
+      "q90": 10087.182796408717
+    },
+    "moe90_2023_dollars": {
+      "q10": 2974.0619280956016,
+      "q50": 4200.827503150247,
+      "q90": 16591.93920839537
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        18367.717602456192,
+        25455.344332699107
+      ],
+      "q50": [
+        93716.6876728242,
+        103727.87708996341
+      ],
+      "q90": [
+        245094.1450612088,
+        284635.17503407504
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:bach": {
+    "cell_key": "ny:wages:bach",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "bach"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 42388,
+    "gold_year_dollars": {
+      "q10": 15152.175,
+      "q50": 69700.005,
+      "q90": 181826.1
+    },
+    "se_year_dollars": {
+      "q10": 204.53877324855853,
+      "q50": 1373.9457427046605,
+      "q90": 0.0
+    },
+    "moe90_year_dollars": {
+      "q10": 336.4363430300962,
+      "q50": 2259.939638122295,
+      "q90": 0.0
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        14751.28637099082,
+        15553.063629009179
+      ],
+      "q50": [
+        67007.12082758674,
+        72392.88917241327
+      ],
+      "q90": [
+        181826.1,
+        181826.1
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 18058.954094157405,
+      "q50": 83071.18883312406,
+      "q90": 216707.44912988888
+    },
+    "se_2023_dollars": {
+      "q10": 243.7773003922532,
+      "q50": 1637.5222102019325,
+      "q90": 0.0
+    },
+    "moe90_2023_dollars": {
+      "q10": 400.97797671863617,
+      "q50": 2693.4843466642396,
+      "q90": 0.0
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        17581.159365140185,
+        18536.74882317462
+      ],
+      "q50": [
+        79861.70427724386,
+        86280.67338900428
+      ],
+      "q90": [
+        216707.44912988888,
+        216707.44912988888
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:female": {
+    "cell_key": "ny:wages:female",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "female"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically women",
+    "filter_sql": "(WAGP >= 1000) AND (SEX = 2)",
+    "n_unweighted": 48521,
+    "gold_year_dollars": {
+      "q10": 7071.015,
+      "q50": 38385.51,
+      "q90": 106065.225
+    },
+    "se_year_dollars": {
+      "q10": 142.85607589633733,
+      "q50": 115.17425047867722,
+      "q90": 505.0724999999977
+    },
+    "moe90_year_dollars": {
+      "q10": 234.97733457014525,
+      "q50": 189.44478363126956,
+      "q90": 830.7703334984437
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        6791.022236270459,
+        7351.007763729542
+      ],
+      "q50": [
+        38159.7726171154,
+        38611.247382884605
+      ],
+      "q90": [
+        105075.3010904184,
+        107055.1489095816
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 8427.511910606789,
+      "q50": 45749.350371865425,
+      "q90": 126412.67865910185
+    },
+    "se_2023_dollars": {
+      "q10": 170.2614520148706,
+      "q50": 137.26917107434534,
+      "q90": 601.9651364719108
+    },
+    "moe90_2023_dollars": {
+      "q10": 280.055166876684,
+      "q50": 225.78769391025904,
+      "q90": 990.1445380241604
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        8093.805596702149,
+        8761.218224511429
+      ],
+      "q50": [
+        45480.307740372045,
+        46018.39300335881
+      ],
+      "q90": [
+        125232.84867166817,
+        127592.50864653553
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:female+bach": {
+    "cell_key": "ny:wages:female+bach",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [
+      "female",
+      "bach"
+    ],
+    "population_nl": "people in New York State with wage earnings of at least $1,000, specifically women and holders of a bachelor's degree or higher",
+    "filter_sql": "(WAGP >= 1000) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+    "n_unweighted": 22602,
+    "gold_year_dollars": {
+      "q10": 13636.9575,
+      "q50": 60608.7,
+      "q90": 141420.3
+    },
+    "se_year_dollars": {
+      "q10": 719.9719465928519,
+      "q50": 0.0,
+      "q90": 2484.6281758446626
+    },
+    "moe90_year_dollars": {
+      "q10": 1184.248467656564,
+      "q50": 0.0,
+      "q90": 4086.8496666639135
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        12225.838414798816,
+        15048.076585201185
+      ],
+      "q50": [
+        60608.7,
+        60608.7
+      ],
+      "q90": [
+        136550.518260371,
+        146290.08173962898
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 16253.058684741665,
+      "q50": 72235.81637662962,
+      "q90": 168550.23821213577
+    },
+    "se_2023_dollars": {
+      "q10": 858.0906921020552,
+      "q50": 0.0,
+      "q90": 2961.2769235194824
+    },
+    "moe90_2023_dollars": {
+      "q10": 1411.4335871573644,
+      "q50": 0.0,
+      "q90": 4870.867088058718
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        14571.231832752588,
+        17934.88553673074
+      ],
+      "q50": [
+        72235.81637662962,
+        72235.81637662962
+      ],
+      "q90": [
+        162746.242093788,
+        174354.2343304835
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  },
+  "ny:wages:marginal": {
+    "cell_key": "ny:wages:marginal",
+    "year": 2019,
+    "state": "ny",
+    "outcome": "wages",
+    "dims": [],
+    "population_nl": "people in New York State with wage earnings of at least $1,000",
+    "filter_sql": "(WAGP >= 1000)",
+    "n_unweighted": 97638,
+    "gold_year_dollars": {
+      "q10": 8081.16,
+      "q50": 42426.09,
+      "q90": 123237.69
+    },
+    "se_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 2118.898027869679
+    },
+    "moe90_year_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 3485.2771062817633
+    },
+    "ci95_year_dollars": {
+      "q10": [
+        8081.16,
+        8081.16
+      ],
+      "q50": [
+        42426.09,
+        42426.09
+      ],
+      "q90": [
+        119084.72617846249,
+        127390.65382153752
+      ]
+    },
+    "gold_2023_dollars": {
+      "q10": 9631.442183550616,
+      "q50": 50565.07146364073,
+      "q90": 146879.4932991469
+    },
+    "se_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 2525.385445686787
+    },
+    "moe90_2023_dollars": {
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 4153.889409788372
+    },
+    "ci95_2023_dollars": {
+      "q10": [
+        9631.442183550616,
+        9631.442183550616
+      ],
+      "q50": [
+        50565.07146364073,
+        50565.07146364073
+      ],
+      "q90": [
+        141929.82877851915,
+        151829.15781977464
+      ]
+    },
+    "adjinc_factor": 1.010145,
+    "cpi_u_annual_average": 255.657,
+    "cpi_to_2023_factor": 1.1918390656230808,
+    "uncertainty_method": "acs_sdr_replicate_weights",
+    "temporal_money_method": "PUMS value * ADJINC / 1e6; then CPI-U annual-average ratio to 2023 dollars",
+    "commute_valid_range_minutes": null
+  }
+}
