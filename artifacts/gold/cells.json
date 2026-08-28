@@ -1,0 +1,1646 @@
+{
+ "ca:income:marginal": {
+  "outcome": "income",
+  "dims": [],
+  "filter_sql": "(HINCP > 0)",
+  "population_nl": "households in California",
+  "year": 2023,
+  "n": 138412,
+  "gold": {
+   "q10": 21600.0,
+   "q50": 95200.0,
+   "q90": 275000.0
+  },
+  "ci": {
+   "q10": [
+    21201.471312272755,
+    21998.528687727245
+   ],
+   "q50": [
+    93904.02800250554,
+    96495.97199749446
+   ],
+   "q90": [
+    272958.5161532715,
+    277041.4838467285
+   ]
+  },
+  "se": {
+   "q10": 203.3346994489627,
+   "q50": 661.2223529191976,
+   "q90": 1041.5925306951851
+  },
+  "moe90": {
+   "q10": 334.45581787371384,
+   "q50": 1087.6139854205287,
+   "q90": 1713.2672519195378
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:income:size1": {
+  "outcome": "income",
+  "dims": [
+   "size1"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP = 1)",
+  "population_nl": "households in California, specifically single-person households",
+  "year": 2023,
+  "n": 33212,
+  "gold": {
+   "q10": 11030.0,
+   "q50": 51000.0,
+   "q90": 160450.0
+  },
+  "ci": {
+   "q10": [
+    10570.034409385084,
+    11489.965590614916
+   ],
+   "q50": [
+    49624.871892592986,
+    52375.128107407014
+   ],
+   "q90": [
+    156993.41027299615,
+    163906.58972700385
+   ]
+  },
+  "se": {
+   "q10": 234.6806340540267,
+   "q50": 701.6088653943876,
+   "q90": 1763.5985937848782
+  },
+  "moe90": {
+   "q10": 386.015292099037,
+   "q50": 1154.0438869452657,
+   "q90": 2900.861543473573
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:income:size24": {
+  "outcome": "income",
+  "dims": [
+   "size24"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4)",
+  "population_nl": "households in California, specifically households of two to four people",
+  "year": 2023,
+  "n": 88212,
+  "gold": {
+   "q10": 30500.0,
+   "q50": 110000.0,
+   "q90": 305800.0
+  },
+  "ci": {
+   "q10": [
+    29561.5271640476,
+    31438.4728359524
+   ],
+   "q50": [
+    109956.17387297117,
+    110043.82612702883
+   ],
+   "q90": [
+    301667.8050913392,
+    309932.1949086608
+   ]
+  },
+  "se": {
+   "q10": 478.82146986115816,
+   "q50": 22.360679774997898,
+   "q90": 2108.3014490342694
+  },
+  "moe90": {
+   "q10": 787.5912313633611,
+   "q50": 36.78004522900572,
+   "q90": 3467.8472851510624
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:income:renter": {
+  "outcome": "income",
+  "dims": [
+   "renter"
+  ],
+  "filter_sql": "(HINCP > 0) AND (TEN IN (2, 3))",
+  "population_nl": "households in California, specifically renter households",
+  "year": 2023,
+  "n": 80630,
+  "gold": {
+   "q10": 16800.0,
+   "q50": 75000.0,
+   "q90": 216020.0
+  },
+  "ci": {
+   "q10": [
+    16341.875450702952,
+    17258.12454929705
+   ],
+   "q50": [
+    75000.0,
+    75000.0
+   ],
+   "q90": [
+    212363.64003979322,
+    219676.35996020678
+   ]
+  },
+  "se": {
+   "q10": 233.741309998896,
+   "q50": 0.0,
+   "q90": 1865.5240550579883
+  },
+  "moe90": {
+   "q10": 384.47024152007253,
+   "q50": 0.0,
+   "q90": 3068.51400812735
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:income:size24+renter": {
+  "outcome": "income",
+  "dims": [
+   "size24",
+   "renter"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4) AND (TEN IN (2, 3))",
+  "population_nl": "households in California, specifically households of two to four people and renter households",
+  "year": 2023,
+  "n": 48140,
+  "gold": {
+   "q10": 24500.0,
+   "q50": 87200.0,
+   "q90": 243300.0
+  },
+  "ci": {
+   "q10": [
+    23438.746917863034,
+    25561.253082136966
+   ],
+   "q50": [
+    85713.68679905255,
+    88686.31320094745
+   ],
+   "q90": [
+    238468.82593777878,
+    248131.17406222122
+   ]
+  },
+  "se": {
+   "q10": 541.4656037090444,
+   "q50": 758.3369963281497,
+   "q90": 2464.9300192906085
+  },
+  "moe90": {
+   "q10": 890.6316621302902,
+   "q50": 1247.3533588618423,
+   "q90": 4054.4490824117197
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:marginal": {
+  "outcome": "wages",
+  "dims": [],
+  "filter_sql": "(WAGP >= 1000)",
+  "population_nl": "people in California with wage earnings of at least $1,000",
+  "year": 2023,
+  "n": 187633,
+  "gold": {
+   "q10": 10000.0,
+   "q50": 50000.0,
+   "q90": 150000.0
+  },
+  "ci": {
+   "q10": [
+    10000.0,
+    10000.0
+   ],
+   "q50": [
+    50000.0,
+    50000.0
+   ],
+   "q90": [
+    146493.90983769367,
+    153506.09016230633
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 1788.8543819998317
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 2942.4036183204576
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:age25_34": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34",
+  "year": 2023,
+  "n": 41834,
+  "gold": {
+   "q10": 13200.0,
+   "q50": 48000.0,
+   "q90": 130000.0
+  },
+  "ci": {
+   "q10": [
+    12321.288885378408,
+    14078.711114621592
+   ],
+   "q50": [
+    47956.17387297117,
+    48043.82612702883
+   ],
+   "q90": [
+    125061.04631410583,
+    134938.95368589417
+   ]
+  },
+  "se": {
+   "q10": 448.3302354291979,
+   "q50": 22.360679774997898,
+   "q90": 2519.9206336708307
+  },
+  "moe90": {
+   "q10": 737.4376138177236,
+   "q50": 36.78004522900572,
+   "q90": 4144.900593923318
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:age55_64": {
+  "outcome": "wages",
+  "dims": [
+   "age55_64"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 55 to 64",
+  "year": 2023,
+  "n": 31764,
+  "gold": {
+   "q10": 15000.0,
+   "q50": 60000.0,
+   "q90": 180000.0
+  },
+  "ci": {
+   "q10": [
+    15000.0,
+    15000.0
+   ],
+   "q50": [
+    58840.46966954592,
+    61159.53033045408
+   ],
+   "q90": [
+    172852.17499408164,
+    187147.82500591836
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 591.6079783099616,
+   "q90": 3646.916505762094
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 973.1085288565682,
+   "q90": 5998.64384169197
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:female": {
+  "outcome": "wages",
+  "dims": [
+   "female"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (SEX = 2)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically women",
+  "year": 2023,
+  "n": 89077,
+  "gold": {
+   "q10": 8400.0,
+   "q50": 42000.0,
+   "q90": 130000.0
+  },
+  "ci": {
+   "q10": [
+    7898.387048855928,
+    8901.612951144072
+   ],
+   "q50": [
+    41868.52161891351,
+    42131.47838108649
+   ],
+   "q90": [
+    130000.0,
+    130000.0
+   ]
+  },
+  "se": {
+   "q10": 255.92967784139455,
+   "q50": 67.08203932499369,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 420.96685884193965,
+   "q50": 110.34013568701715,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:bach": {
+  "outcome": "wages",
+  "dims": [
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 80141,
+  "gold": {
+   "q10": 20000.0,
+   "q50": 85000.0,
+   "q90": 220000.0
+  },
+  "ci": {
+   "q10": [
+    18946.348445082243,
+    21053.651554917757
+   ],
+   "q50": [
+    85000.0,
+    85000.0
+   ],
+   "q90": [
+    219561.7387297117,
+    220438.2612702883
+   ]
+  },
+  "se": {
+   "q10": 537.5872022286245,
+   "q50": 0.0,
+   "q90": 223.60679774997897
+  },
+  "moe90": {
+   "q10": 884.2522593884476,
+   "q50": 0.0,
+   "q90": 367.8004522900572
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:female+bach": {
+  "outcome": "wages",
+  "dims": [
+   "female",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically women and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 40860,
+  "gold": {
+   "q10": 15000.0,
+   "q50": 75000.0,
+   "q90": 180000.0
+  },
+  "ci": {
+   "q10": [
+    15000.0,
+    15000.0
+   ],
+   "q50": [
+    75000.0,
+    75000.0
+   ],
+   "q90": [
+    180000.0,
+    180000.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:age25_34+female": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34",
+   "female"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women",
+  "year": 2023,
+  "n": 19817,
+  "gold": {
+   "q10": 12000.0,
+   "q50": 45000.0,
+   "q90": 117000.0
+  },
+  "ci": {
+   "q10": [
+    12000.0,
+    12000.0
+   ],
+   "q50": [
+    43962.884543652755,
+    46037.115456347245
+   ],
+   "q90": [
+    110238.8344225082,
+    123761.1655774918
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 529.1502622129182,
+   "q90": 3449.637662132068
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 870.374728003241,
+   "q90": 5674.1490202263285
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:age55_64+bach": {
+  "outcome": "wages",
+  "dims": [
+   "age55_64",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 55 to 64 and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 12785,
+  "gold": {
+   "q10": 23000.0,
+   "q50": 100000.0,
+   "q90": 250000.0
+  },
+  "ci": {
+   "q10": [
+    19815.435463578655,
+    26184.564536421345
+   ],
+   "q50": [
+    100000.0,
+    100000.0
+   ],
+   "q90": [
+    250000.0,
+    250000.0
+   ]
+  },
+  "se": {
+   "q10": 1624.807680927192,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 2672.5708070717023,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:wages:age25_34+female+bach": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34",
+   "female",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in California with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 11062,
+  "gold": {
+   "q10": 18000.0,
+   "q50": 65000.0,
+   "q90": 150000.0
+  },
+  "ci": {
+   "q10": [
+    15924.843297965643,
+    20075.156702034357
+   ],
+   "q50": [
+    64380.20496769544,
+    65619.79503230457
+   ],
+   "q90": [
+    148840.4696695459,
+    151159.5303304541
+   ]
+  },
+  "se": {
+   "q10": 1058.772874605314,
+   "q50": 316.22776601683796,
+   "q90": 591.6079783099616
+  },
+  "moe90": {
+   "q10": 1741.5264029123869,
+   "q50": 520.1483878755574,
+   "q90": 973.1085288565682
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:marginal": {
+  "outcome": "commute",
+  "dims": [],
+  "filter_sql": "(JWMNP > 0)",
+  "population_nl": "people in California who commute to work",
+  "year": 2023,
+  "n": 153782,
+  "gold": {
+   "q10": 10.0,
+   "q50": 20.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    20.0,
+    20.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:age25_34": {
+  "outcome": "commute",
+  "dims": [
+   "age25_34"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34)",
+  "population_nl": "people in California who commute to work, specifically workers aged 25 to 34",
+  "year": 2023,
+  "n": 33809,
+  "gold": {
+   "q10": 10.0,
+   "q50": 25.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    25.0,
+    25.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:age55_64": {
+  "outcome": "commute",
+  "dims": [
+   "age55_64"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in California who commute to work, specifically workers aged 55 to 64",
+  "year": 2023,
+  "n": 26819,
+  "gold": {
+   "q10": 10.0,
+   "q50": 22.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    15.94310873982132,
+    28.05689126017868
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 3.0903074280724887,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 5.083103381460109,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:female": {
+  "outcome": "commute",
+  "dims": [
+   "female"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (SEX = 2)",
+  "population_nl": "people in California who commute to work, specifically women",
+  "year": 2023,
+  "n": 70891,
+  "gold": {
+   "q10": 8.0,
+   "q50": 20.0,
+   "q90": 50.0
+  },
+  "ci": {
+   "q10": [
+    8.0,
+    8.0
+   ],
+   "q50": [
+    20.0,
+    20.0
+   ],
+   "q90": [
+    47.22819235130064,
+    52.77180764869936
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 1.4142135623730951
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 2.3261743073533476
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:age25_34+female": {
+  "outcome": "commute",
+  "dims": [
+   "age25_34",
+   "female"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+  "population_nl": "people in California who commute to work, specifically workers aged 25 to 34 and women",
+  "year": 2023,
+  "n": 15387,
+  "gold": {
+   "q10": 10.0,
+   "q50": 20.0,
+   "q90": 55.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    20.0,
+    20.0
+   ],
+   "q90": [
+    45.10266702956295,
+    64.89733297043705
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 5.049752469181039
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 8.306103664139584
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ca:commute:female+age55_64": {
+  "outcome": "commute",
+  "dims": [
+   "female",
+   "age55_64"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (SEX = 2) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in California who commute to work, specifically women and workers aged 55 to 64",
+  "year": 2023,
+  "n": 12490,
+  "gold": {
+   "q10": 8.0,
+   "q50": 20.0,
+   "q90": 55.0
+  },
+  "ci": {
+   "q10": [
+    7.240909212871004,
+    8.759090787128995
+   ],
+   "q50": [
+    20.0,
+    20.0
+   ],
+   "q90": [
+    45.1903851523932,
+    64.80961484760681
+   ]
+  },
+  "se": {
+   "q10": 0.3872983346207417,
+   "q50": 0.0,
+   "q90": 5.004997502496879
+  },
+  "moe90": {
+   "q10": 0.6370490704131919,
+   "q50": 0.0,
+   "q90": 8.232488294865052
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ca"
+ },
+ "ny:income:marginal": {
+  "outcome": "income",
+  "dims": [],
+  "filter_sql": "(HINCP > 0)",
+  "population_nl": "households in New York State",
+  "year": 2023,
+  "n": 78891,
+  "gold": {
+   "q10": 16400.0,
+   "q50": 82000.0,
+   "q90": 253400.0
+  },
+  "ci": {
+   "q10": [
+    15737.514777323822,
+    17062.485222676176
+   ],
+   "q50": [
+    80949.85429665932,
+    83050.14570334068
+   ],
+   "q90": [
+    249976.70253138227,
+    256823.29746861773
+   ]
+  },
+  "se": {
+   "q10": 338.0088756231114,
+   "q50": 535.7984695760151,
+   "q90": 1746.6124355448749
+  },
+  "moe90": {
+   "q10": 555.9751250104639,
+   "q50": 881.3100559971565,
+   "q90": 2872.9217994845317
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:income:size1": {
+  "outcome": "income",
+  "dims": [
+   "size1"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP = 1)",
+  "population_nl": "households in New York State, specifically single-person households",
+  "year": 2023,
+  "n": 23208,
+  "gold": {
+   "q10": 9900.0,
+   "q50": 43400.0,
+   "q90": 140000.0
+  },
+  "ci": {
+   "q10": [
+    9527.71001322807,
+    10272.28998677193
+   ],
+   "q50": [
+    41908.919478481075,
+    44891.080521518925
+   ],
+   "q90": [
+    136996.69812703313,
+    143003.30187296687
+   ]
+  },
+  "se": {
+   "q10": 189.94736112934027,
+   "q50": 760.7693474371848,
+   "q90": 1532.3250307947071
+  },
+  "moe90": {
+   "q10": 312.43560588345645,
+   "q50": 1251.3542204055582,
+   "q90": 2520.4503845712
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:income:size24": {
+  "outcome": "income",
+  "dims": [
+   "size24"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4)",
+  "population_nl": "households in New York State, specifically households of two to four people",
+  "year": 2023,
+  "n": 48838,
+  "gold": {
+   "q10": 26500.0,
+   "q50": 102000.0,
+   "q90": 281900.0
+  },
+  "ci": {
+   "q10": [
+    25372.228480168247,
+    27627.771519831753
+   ],
+   "q50": [
+    101080.4864946969,
+    102919.5135053031
+   ],
+   "q90": [
+    276815.74613345193,
+    286984.25386654807
+   ]
+  },
+  "se": {
+   "q10": 575.4042057545287,
+   "q50": 469.14816422959603,
+   "q90": 2594.0547411340417
+  },
+  "moe90": {
+   "q10": 946.4556947984677,
+   "q50": 771.680059510676,
+   "q90": 4266.840349464991
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:income:renter": {
+  "outcome": "income",
+  "dims": [
+   "renter"
+  ],
+  "filter_sql": "(HINCP > 0) AND (TEN IN (2, 3))",
+  "population_nl": "households in New York State, specifically renter households",
+  "year": 2023,
+  "n": 49292,
+  "gold": {
+   "q10": 12600.0,
+   "q50": 65000.0,
+   "q90": 213000.0
+  },
+  "ci": {
+   "q10": [
+    11881.705955609106,
+    13318.294044390894
+   ],
+   "q50": [
+    64700.27927245195,
+    65299.72072754805
+   ],
+   "q90": [
+    209070.35285872186,
+    216929.64714127814
+   ]
+  },
+  "se": {
+   "q10": 366.483287477069,
+   "q50": 152.9215485142627,
+   "q90": 2004.9588524456058
+  },
+  "moe90": {
+   "q10": 602.8113646237559,
+   "q50": 251.5335637127205,
+   "q90": 3297.8638403336163
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:income:size24+renter": {
+  "outcome": "income",
+  "dims": [
+   "size24",
+   "renter"
+  ],
+  "filter_sql": "(HINCP > 0) AND (NP BETWEEN 2 AND 4) AND (TEN IN (2, 3))",
+  "population_nl": "households in New York State, specifically households of two to four people and renter households",
+  "year": 2023,
+  "n": 28342,
+  "gold": {
+   "q10": 20900.0,
+   "q50": 84800.0,
+   "q90": 251000.0
+  },
+  "ci": {
+   "q10": [
+    19738.004147646912,
+    22061.995852353088
+   ],
+   "q50": [
+    83303.2559511532,
+    86296.7440488468
+   ],
+   "q90": [
+    246889.971413524,
+    255110.028586476
+   ]
+  },
+  "se": {
+   "q10": 592.8659207611785,
+   "q50": 763.6589552935263,
+   "q90": 2096.991893165064
+  },
+  "moe90": {
+   "q10": 975.1776600599485,
+   "q50": 1256.107202368529,
+   "q90": 3449.24472116039
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:marginal": {
+  "outcome": "wages",
+  "dims": [],
+  "filter_sql": "(WAGP >= 1000)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000",
+  "year": 2023,
+  "n": 99944,
+  "gold": {
+   "q10": 8800.0,
+   "q50": 50000.0,
+   "q90": 149000.0
+  },
+  "ci": {
+   "q10": [
+    8310.009003864987,
+    9289.990996135013
+   ],
+   "q50": [
+    50000.0,
+    50000.0
+   ],
+   "q90": [
+    145179.32682389114,
+    152820.67317610886
+   ]
+  },
+  "se": {
+   "q10": 250.0,
+   "q50": 0.0,
+   "q90": 1949.3588689617927
+  },
+  "moe90": {
+   "q10": 411.21340673786807,
+   "q50": 0.0,
+   "q90": 3206.4100058418244
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:age25_34": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34",
+  "year": 2023,
+  "n": 20818,
+  "gold": {
+   "q10": 14300.0,
+   "q50": 50000.0,
+   "q90": 130000.0
+  },
+  "ci": {
+   "q10": [
+    13189.545912050924,
+    15410.454087949076
+   ],
+   "q50": [
+    49240.909212871,
+    50759.090787129
+   ],
+   "q90": [
+    129020.01800772997,
+    130979.98199227003
+   ]
+  },
+  "se": {
+   "q10": 566.5686189686118,
+   "q50": 387.2983346207417,
+   "q90": 500.0
+  },
+  "moe90": {
+   "q10": 931.9224478274077,
+   "q50": 637.0490704131919,
+   "q90": 822.4268134757361
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:age55_64": {
+  "outcome": "wages",
+  "dims": [
+   "age55_64"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 55 to 64",
+  "year": 2023,
+  "n": 18710,
+  "gold": {
+   "q10": 14400.0,
+   "q50": 57000.0,
+   "q90": 153000.0
+  },
+  "ci": {
+   "q10": [
+    13091.806625678286,
+    15708.193374321714
+   ],
+   "q50": [
+    54263.05924427408,
+    59736.94075572592
+   ],
+   "q90": [
+    143723.75735636736,
+    162276.24264363264
+   ]
+  },
+  "se": {
+   "q10": 667.4578638386097,
+   "q50": 1396.4240043768941,
+   "q90": 4732.863826479693
+  },
+  "moe90": {
+   "q10": 1097.870488172219,
+   "q50": 2296.913088361433,
+   "q90": 7784.868230852546
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:female": {
+  "outcome": "wages",
+  "dims": [
+   "female"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (SEX = 2)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically women",
+  "year": 2023,
+  "n": 50085,
+  "gold": {
+   "q10": 7000.0,
+   "q50": 44000.0,
+   "q90": 125000.0
+  },
+  "ci": {
+   "q10": [
+    7000.0,
+    7000.0
+   ],
+   "q50": [
+    42450.5124192386,
+    45549.4875807614
+   ],
+   "q90": [
+    125000.0,
+    125000.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 790.5694150420949,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 1300.3709696888934,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:bach": {
+  "outcome": "wages",
+  "dims": [
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 45353,
+  "gold": {
+   "q10": 19000.0,
+   "q50": 78000.0,
+   "q90": 200000.0
+  },
+  "ci": {
+   "q10": [
+    17371.34186653881,
+    20628.65813346119
+   ],
+   "q50": [
+    76926.48351376971,
+    79073.51648623029
+   ],
+   "q90": [
+    200000.0,
+    200000.0
+   ]
+  },
+  "se": {
+   "q10": 830.9632964216892,
+   "q50": 547.7225575051662,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 1366.8129919827668,
+   "q50": 900.9234352755088,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:female+bach": {
+  "outcome": "wages",
+  "dims": [
+   "female",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically women and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 24371,
+  "gold": {
+   "q10": 15000.0,
+   "q50": 70000.0,
+   "q90": 160000.0
+  },
+  "ci": {
+   "q10": [
+    15000.0,
+    15000.0
+   ],
+   "q50": [
+    70000.0,
+    70000.0
+   ],
+   "q90": [
+    150559.56332365374,
+    169440.43667634626
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 4816.637831516919
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 7922.6642068822775
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:age25_34+female": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34",
+   "female"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women",
+  "year": 2023,
+  "n": 10366,
+  "gold": {
+   "q10": 12000.0,
+   "q50": 50000.0,
+   "q90": 120000.0
+  },
+  "ci": {
+   "q10": [
+    10543.152033177963,
+    13456.847966822037
+   ],
+   "q50": [
+    48620.346838638805,
+    51379.653161361195
+   ],
+   "q90": [
+    113694.51835351302,
+    126305.48164648698
+   ]
+  },
+  "se": {
+   "q10": 743.3034373659252,
+   "q50": 703.9176088151227,
+   "q90": 3217.1415884290823
+  },
+  "moe90": {
+   "q10": 1222.6253548768386,
+   "q50": 1157.841431934562,
+   "q90": 5291.727010143996
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:age55_64+bach": {
+  "outcome": "wages",
+  "dims": [
+   "age55_64",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 55 AND 64) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 55 to 64 and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 7390,
+  "gold": {
+   "q10": 20000.0,
+   "q50": 90000.0,
+   "q90": 233000.0
+  },
+  "ci": {
+   "q10": [
+    20000.0,
+    20000.0
+   ],
+   "q50": [
+    89240.909212871,
+    90759.090787129
+   ],
+   "q90": [
+    213661.79904451882,
+    252338.20095548118
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 387.2983346207417,
+   "q90": 9866.610360199697
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 637.0490704131919,
+   "q90": 16229.129836691442
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:wages:age25_34+female+bach": {
+  "outcome": "wages",
+  "dims": [
+   "age25_34",
+   "female",
+   "bach"
+  ],
+  "filter_sql": "(WAGP >= 1000) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2) AND (CAST(SCHL AS INTEGER) >= 21)",
+  "population_nl": "people in New York State with wage earnings of at least $1,000, specifically workers aged 25 to 34 and women and holders of a bachelor's degree or higher",
+  "year": 2023,
+  "n": 6614,
+  "gold": {
+   "q10": 20000.0,
+   "q50": 65000.0,
+   "q90": 145000.0
+  },
+  "ci": {
+   "q10": [
+    20000.0,
+    20000.0
+   ],
+   "q50": [
+    65000.0,
+    65000.0
+   ],
+   "q90": [
+    136400.69291754492,
+    153599.30708245508
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 4387.482193696061
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 7216.765999485967
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:marginal": {
+  "outcome": "commute",
+  "dims": [],
+  "filter_sql": "(JWMNP > 0)",
+  "population_nl": "people in New York State who commute to work",
+  "year": 2023,
+  "n": 83093,
+  "gold": {
+   "q10": 9.0,
+   "q50": 30.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    6.263059244274084,
+    11.736940755725916
+   ],
+   "q50": [
+    28.48181842574201,
+    31.51818157425799
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 1.3964240043768943,
+   "q50": 0.7745966692414834,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 2.2969130883614333,
+   "q50": 1.2740981408263838,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:age25_34": {
+  "outcome": "commute",
+  "dims": [
+   "age25_34"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34)",
+  "population_nl": "people in New York State who commute to work, specifically workers aged 25 to 34",
+  "year": 2023,
+  "n": 17201,
+  "gold": {
+   "q10": 10.0,
+   "q50": 30.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    30.0,
+    30.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:age55_64": {
+  "outcome": "commute",
+  "dims": [
+   "age55_64"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in New York State who commute to work, specifically workers aged 55 to 64",
+  "year": 2023,
+  "n": 16188,
+  "gold": {
+   "q10": 10.0,
+   "q50": 30.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    8.040036015459947,
+    11.959963984540053
+   ],
+   "q50": [
+    21.80088240344443,
+    38.19911759655557
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 1.0,
+   "q50": 4.183300132670378,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 1.6448536269514722,
+   "q50": 6.880916395849446,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:female": {
+  "outcome": "commute",
+  "dims": [
+   "female"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (SEX = 2)",
+  "population_nl": "people in New York State who commute to work, specifically women",
+  "year": 2023,
+  "n": 40623,
+  "gold": {
+   "q10": 8.0,
+   "q50": 25.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    7.380204967695438,
+    8.619795032304562
+   ],
+   "q50": [
+    25.0,
+    25.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.31622776601683794,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.5201483878755574,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:age25_34+female": {
+  "outcome": "commute",
+  "dims": [
+   "age25_34",
+   "female"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (AGEP BETWEEN 25 AND 34) AND (SEX = 2)",
+  "population_nl": "people in New York State who commute to work, specifically workers aged 25 to 34 and women",
+  "year": 2023,
+  "n": 8320,
+  "gold": {
+   "q10": 10.0,
+   "q50": 30.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    10.0,
+    10.0
+   ],
+   "q50": [
+    30.0,
+    30.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 0.0,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ },
+ "ny:commute:female+age55_64": {
+  "outcome": "commute",
+  "dims": [
+   "female",
+   "age55_64"
+  ],
+  "filter_sql": "(JWMNP > 0) AND (SEX = 2) AND (AGEP BETWEEN 55 AND 64)",
+  "population_nl": "people in New York State who commute to work, specifically women and workers aged 55 to 64",
+  "year": 2023,
+  "n": 8094,
+  "gold": {
+   "q10": 10.0,
+   "q50": 25.0,
+   "q90": 60.0
+  },
+  "ci": {
+   "q10": [
+    8.360176480688885,
+    11.639823519311115
+   ],
+   "q50": [
+    25.0,
+    25.0
+   ],
+   "q90": [
+    60.0,
+    60.0
+   ]
+  },
+  "se": {
+   "q10": 0.8366600265340756,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "moe90": {
+   "q10": 1.3761832791698891,
+   "q50": 0.0,
+   "q90": 0.0
+  },
+  "uncertainty_method": "acs_sdr_replicate_weights",
+  "state": "ny"
+ }
+}

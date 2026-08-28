@@ -1,0 +1,11 @@
+metric,value
+Nominal coverage,0.9
+Empirical coverage,0.6083333333333333
+Coverage CI low,0.475
+Coverage CI high,0.7333333333333334
+Mean normalized median error,0.046574337286263236
+Mean interval width / gold IQR,0.0914181640625908
+Width vs actual error Pearson,0.23535138275843726
+Width vs actual error Spearman,0.15461112674734967
+Width vs ACS SE Pearson,0.18092866446837683
+Width vs ACS SE Spearman,-0.0745846274818757
