@@ -266,9 +266,9 @@ def compute_cell(
     con = duckdb.connect()
 
     try:
-        df = con.execute(
+        data = con.execute(
             query
-        ).fetchdf()
+        ).fetchnumpy()
 
         if cfg["money"]:
             adj_range = con.execute(
@@ -285,13 +285,13 @@ def compute_cell(
     finally:
         con.close()
 
-    if len(df) == 0:
+    if len(data["V"]) == 0:
         raise RuntimeError(
             f"{year} {cell_key}: empty population"
         )
 
-    values = df["V"].to_numpy()
-    full_weights = df["W"].to_numpy()
+    values = np.asarray(data["V"], dtype=float)
+    full_weights = np.asarray(data["W"], dtype=float)
 
     full = quantiles(
         values,
@@ -304,7 +304,7 @@ def compute_cell(
         replicate_quantiles.append(
             quantiles(
                 values,
-                df[rep].to_numpy(),
+                np.asarray(data[rep], dtype=float),
             )
         )
 
@@ -371,7 +371,7 @@ def compute_cell(
             "filter_sql"
         ],
         "n_unweighted": int(
-            len(df)
+            len(data["V"])
         ),
         "gold_year_dollars": full,
         "se_year_dollars": se,
